@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="night">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO Primário ═══════════════════════════════════════════════════ -->
   <title>Preço Limpo — O imposto real que você paga</title>
-  <meta name="description" content="Descubra o imposto real embutido nos seus produtos. O governo declara 33%, mas você está pagando 51%. Preço Limpo calcula a carga tributária verdadeira do seu dia a dia." />
-  <meta name="keywords" content="imposto real, carga tributária, calculadora de imposto, imposto Brasil, ICMS, tributos, nota fiscal, imposto por dentro, imposto por fora, preço real, tributação, consumidor" />
+  <meta name="description"
+    content="Descubra o imposto real embutido nos seus produtos. O governo declara 33%, mas você está pagando 51%. Preço Limpo calcula a carga tributária verdadeira do seu dia a dia." />
+  <meta name="keywords"
+    content="imposto real, carga tributária, calculadora de imposto, imposto Brasil, ICMS, tributos, nota fiscal, imposto por dentro, imposto por fora, preço real, tributação, consumidor" />
   <meta name="author" content="Preço Limpo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://precolimpo.cc/" />
 
   <!-- ═══ Open Graph (Facebook, WhatsApp, LinkedIn, etc.) ════════════════ -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://precolimpo.cc/" />
-  <meta property="og:title"       content="Preço Limpo — O imposto real que você paga" />
-  <meta property="og:description" content="O governo declara 33% de imposto. Na prática, você paga 51%. Descubra a verdade sobre os tributos embutidos nos seus produtos." />
-  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://precolimpo.cc/" />
+  <meta property="og:title" content="Preço Limpo — O imposto real que você paga" />
+  <meta property="og:description"
+    content="O governo declara 33% de imposto. Na prática, você paga 51%. Descubra a verdade sobre os tributos embutidos nos seus produtos." />
+  <meta property="og:locale" content="pt_BR" />
 
   <!-- ═══ Twitter / X Card ══════════════════════════════════════════════ -->
-  <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Preço Limpo — O imposto real que você paga" />
-  <meta name="twitter:description" content="O governo declara 33% de imposto. Na prática, você paga 51%. Descubra a verdade sobre os tributos embutidos nos seus produtos." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Preço Limpo — O imposto real que você paga" />
+  <meta name="twitter:description"
+    content="O governo declara 33% de imposto. Na prática, você paga 51%. Descubra a verdade sobre os tributos embutidos nos seus produtos." />
 
   <!-- ═══ Favicons & Manifest ══════════════════════════════════════════ -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -63,10 +68,13 @@
 
   <!-- ═══ Google Fonts ══════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
   <style>
-    * { font-family: 'Inter', sans-serif; }
+    * {
+      font-family: 'Inter', sans-serif;
+    }
 
     body {
       background: #0d1117;
@@ -137,17 +145,32 @@
 
     /* Slide-in animation */
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .slide-up {
       animation: slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
-    .slide-up-delay-1 { animation-delay: 0.07s; }
-    .slide-up-delay-2 { animation-delay: 0.14s; }
-    .slide-up-delay-3 { animation-delay: 0.21s; }
+    .slide-up-delay-1 {
+      animation-delay: 0.07s;
+    }
+
+    .slide-up-delay-2 {
+      animation-delay: 0.14s;
+    }
+
+    .slide-up-delay-3 {
+      animation-delay: 0.21s;
+    }
 
     /* Input focus glow */
     input[type="number"]:focus {
@@ -164,32 +187,40 @@
 
     .divider-line {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
       margin: 1.5rem 0;
     }
 
     /* Progress bar for tax rate */
     .tax-bar-bg {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 999px;
       height: 10px;
       overflow: hidden;
     }
+
     .tax-bar-fill {
       height: 100%;
       border-radius: 999px;
       background: linear-gradient(90deg, #f87171, #fb923c, #fbbf24);
       transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
+
     .tax-bar-fill.fed {
       background: linear-gradient(90deg, #60a5fa, #818cf8);
     }
+
     .tax-bar-fill.est {
       background: linear-gradient(90deg, #34d399, #6ee7b7);
     }
 
-    #resultado { display: none; }
-    #resultado.visible { display: block; }
+    #resultado {
+      display: none;
+    }
+
+    #resultado.visible {
+      display: block;
+    }
 
     .tooltip-icon {
       display: inline-flex;
@@ -198,7 +229,7 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       font-size: 10px;
       cursor: help;
       margin-left: 4px;
@@ -212,12 +243,14 @@
 
     <!-- Header -->
     <div class="text-center mb-10">
-      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-orange-300 mb-5">
+      <div
+        class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-orange-300 mb-5">
         🇧🇷 Calculadora de Imposto Real
       </div>
       <h1 class="text-5xl sm:text-6xl font-black mb-3 brand-gradient">Preço Limpo</h1>
       <p class="text-white/50 text-base max-w-md mx-auto leading-relaxed">
-        O governo diz que o imposto é <strong class="text-white/70">33%</strong>. Na prática, você está pagando <strong class="text-orange-400">51%</strong>. Descubra a verdade.
+        O governo diz que o imposto é <strong class="text-white/70">33%</strong>. Na prática, você está pagando <strong
+          class="text-orange-400">51%</strong>. Descubra a verdade.
       </p>
     </div>
 
@@ -232,19 +265,14 @@
           <label class="label-tag text-white/50 mb-2 block" for="total">
             Valor total pago (R$)
           </label>
-          <input
-            id="total"
-            type="text"
-            inputmode="decimal"
-            placeholder="Ex: 100,45"
-            autocomplete="off"
+          <input id="total" type="text" inputmode="decimal" placeholder="Ex: 100,45" autocomplete="off"
             class="input w-full bg-white/5 border border-white/10 text-white placeholder-white/25 rounded-xl text-base focus:border-indigo-500/60 transition-colors"
-            oninput="onFormChange()"
-          />
+            oninput="onFormChange()" />
         </div>
 
         <hr class="divider-line" />
-        <p class="text-white/35 text-xs -mt-2 -mb-1">Informe o imposto federal e estadual separados <em>ou</em> somente o total.</p>
+        <p class="text-white/35 text-xs -mt-2 -mb-1">Informe o imposto federal e estadual separados <em>ou</em> somente
+          o total.</p>
 
         <!-- Fed + Est lado a lado -->
         <div class="grid grid-cols-2 gap-4">
@@ -252,29 +280,17 @@
             <label class="label-tag text-blue-400/70 mb-2 block" for="fed">
               Imposto Federal (R$) <span class="label-tag text-white/25">opcional</span>
             </label>
-            <input
-              id="fed"
-              type="text"
-              inputmode="decimal"
-              placeholder="Ex: 16,47"
-              autocomplete="off"
+            <input id="fed" type="text" inputmode="decimal" placeholder="Ex: 16,47" autocomplete="off"
               class="input w-full bg-white/5 border border-white/10 text-white placeholder-white/25 rounded-xl text-sm focus:border-blue-500/60 transition-colors"
-              oninput="onFedEstChange()"
-            />
+              oninput="onFedEstChange()" />
           </div>
           <div>
             <label class="label-tag text-emerald-400/70 mb-2 block" for="est">
               Imposto Estadual (R$) <span class="label-tag text-white/25">opcional</span>
             </label>
-            <input
-              id="est"
-              type="text"
-              inputmode="decimal"
-              placeholder="Ex: 17,59"
-              autocomplete="off"
+            <input id="est" type="text" inputmode="decimal" placeholder="Ex: 17,59" autocomplete="off"
               class="input w-full bg-white/5 border border-white/10 text-white placeholder-white/25 rounded-xl text-sm focus:border-emerald-500/60 transition-colors"
-              oninput="onFedEstChange()"
-            />
+              oninput="onFedEstChange()" />
           </div>
         </div>
 
@@ -284,15 +300,9 @@
             Imposto total (R$)
             <span class="label-tag text-white/25">preenchido automaticamente, ou insira manualmente</span>
           </label>
-          <input
-            id="impostoTotal"
-            type="text"
-            inputmode="decimal"
-            placeholder="Ex: 34,06"
-            autocomplete="off"
+          <input id="impostoTotal" type="text" inputmode="decimal" placeholder="Ex: 34,06" autocomplete="off"
             class="input w-full bg-white/5 border border-white/10 text-white placeholder-white/25 rounded-xl text-base focus:border-orange-500/60 transition-colors"
-            oninput="onImpostoTotalManual()"
-          />
+            oninput="onImpostoTotalManual()" />
         </div>
 
       </div>
@@ -301,13 +311,8 @@
       <div id="erroMsg" class="mt-4 text-red-400 text-sm font-medium hidden"></div>
 
       <!-- Botão -->
-      <button
-        id="btnCalcular"
-        onclick="calcular()"
-        class="btn w-full mt-6 font-bold text-base rounded-xl border-0"
-        style="background: linear-gradient(135deg, #f87171, #fb923c, #fbbf24); color: #0d1117;"
-        disabled
-      >
+      <button id="btnCalcular" onclick="calcular()" class="btn w-full mt-6 font-bold text-base rounded-xl border-0"
+        style="background: linear-gradient(135deg, #f87171, #fb923c, #fbbf24); color: #0d1117;" disabled>
         Calcular imposto real
       </button>
     </div>
@@ -395,7 +400,9 @@
           <div>
             <p class="text-yellow-300 font-bold text-sm mb-1">IRPJ já está no preço</p>
             <p class="text-white/55 text-sm leading-relaxed mb-3">
-              O valor real calculado (<strong id="irpjValorReal" class="text-white/80">—</strong>) ainda inclui o <strong class="text-yellow-300">IRPJ</strong> — imposto de renda das empresas que é repassado ao consumidor. Estimativas para o <em>melhor caso</em>:
+              O valor real calculado (<strong id="irpjValorReal" class="text-white/80">—</strong>) ainda inclui o
+              <strong class="text-yellow-300">IRPJ</strong> — imposto de renda das empresas que é repassado ao
+              consumidor. Estimativas para o <em>melhor caso</em>:
             </p>
             <div class="grid grid-cols-2 gap-3">
               <div class="bg-yellow-400/5 border border-yellow-400/15 rounded-xl p-3">
@@ -410,7 +417,8 @@
               </div>
             </div>
             <p class="text-white/25 text-xs mt-3 leading-relaxed">
-              * Valores aproximados. O IRPJ varia conforme o regime tributário, margens e deduções de cada empresa. Este é o impacto estimado no preço final de venda.
+              * Valores aproximados. O IRPJ varia conforme o regime tributário, margens e deduções de cada empresa. Este
+              é o impacto estimado no preço final de venda.
             </p>
           </div>
         </div>
@@ -454,7 +462,7 @@
       if (raw.includes(',') && raw.includes('.')) {
         // Ex: 1.234,56 (BR) ou 1,234.56 (US) — detectar qual é milhar
         const lastComma = raw.lastIndexOf(',');
-        const lastDot   = raw.lastIndexOf('.');
+        const lastDot = raw.lastIndexOf('.');
         if (lastComma > lastDot) {
           // vírgula é decimal → remover pontos (milhar) e trocar vírgula por ponto
           normalized = raw.replace(/\./g, '').replace(',', '.');
@@ -494,6 +502,11 @@
     }
 
     // ─── Eventos do form ─────────────────────────────────────────────────────
+
+    // Chamado quando o valor total muda:
+    function onFormChange() {
+      validar();
+    }
 
     // Chamado quando Fed OU Est muda:
     // atualiza o imposto total com a soma do que estiver preenchido
@@ -542,22 +555,22 @@
     function calcular() {
       $('erroMsg').classList.add('hidden');
 
-      const P     = parseVal('total');
-      const fedR  = parseVal('fed');
-      const estR  = parseVal('est');
-      const impT  = parseVal('impostoTotal');
+      const P = parseVal('total');
+      const fedR = parseVal('fed');
+      const estR = parseVal('est');
+      const impT = parseVal('impostoTotal');
 
       if (!P || !impT) return showErro('Preencha o valor total e o imposto total.');
-      if (impT >= P)   return showErro('O imposto não pode ser maior ou igual ao valor total.');
+      if (impT >= P) return showErro('O imposto não pode ser maior ou igual ao valor total.');
 
       // ── Total ──
       const total = calcReal(P, impT);
 
-      $('resTotal').textContent          = fmtR(P);
-      $('resTotalImposto').textContent   = fmtR(total.i);
+      $('resTotal').textContent = fmtR(P);
+      $('resTotalImposto').textContent = fmtR(total.i);
       $('resTotalPctDeclarado').textContent = fmtPct(total.taxaDeclarada * 100);
       $('resImpostoRealPct').textContent = fmtPct(total.taxaReal * 100);
-      $('resValorReal').textContent      = fmtR(total.c);
+      $('resValorReal').textContent = fmtR(total.c);
 
       // Barra (cap 100%)
       $('barTotal').style.width = Math.min(total.taxaReal * 100, 100) + '%';
@@ -571,23 +584,27 @@
       $('blocoCategorias').classList.toggle('hidden', !temQualquer);
 
       // Card Federal
+      // A taxa real individual = imposto_individual / custo_real_total
+      // (o custo real é único, calculado a partir do imposto total)
       $('cardFed').classList.toggle('hidden', !temFed);
       if (temFed) {
-        const fedCalc = calcReal(P, fedR);
-        $('resFedPct').textContent       = fmtPct(fedCalc.taxaReal * 100);
-        $('resFedDeclarado').textContent = fmtPct(fedCalc.taxaDeclarada * 100);
-        $('resFedValor').textContent     = fmtR(fedR);
-        $('barFed').style.width          = Math.min(fedCalc.taxaReal * 100, 100) + '%';
+        const fedTaxaReal = fedR / total.c;
+        const fedTaxaDeclarada = fedR / P;
+        $('resFedPct').textContent = fmtPct(fedTaxaReal * 100);
+        $('resFedDeclarado').textContent = fmtPct(fedTaxaDeclarada * 100);
+        $('resFedValor').textContent = fmtR(fedR);
+        $('barFed').style.width = Math.min(fedTaxaReal * 100, 100) + '%';
       }
 
       // Card Estadual
       $('cardEst').classList.toggle('hidden', !temEst);
       if (temEst) {
-        const estCalc = calcReal(P, estR);
-        $('resEstPct').textContent       = fmtPct(estCalc.taxaReal * 100);
-        $('resEstDeclarado').textContent = fmtPct(estCalc.taxaDeclarada * 100);
-        $('resEstValor').textContent     = fmtR(estR);
-        $('barEst').style.width          = Math.min(estCalc.taxaReal * 100, 100) + '%';
+        const estTaxaReal = estR / total.c;
+        const estTaxaDeclarada = estR / P;
+        $('resEstPct').textContent = fmtPct(estTaxaReal * 100);
+        $('resEstDeclarado').textContent = fmtPct(estTaxaDeclarada * 100);
+        $('resEstValor').textContent = fmtR(estR);
+        $('barEst').style.width = Math.min(estTaxaReal * 100, 100) + '%';
       }
 
       // ── IRPJ ──
@@ -600,12 +617,12 @@
 
       // IRPJ embutido = aliq × P (calculado sobre o faturamento/preço)
       // Redução no custo real = esse valor / C × 100
-      const irpjSimplesR     = irpjSimplesAliq * P;
-      const irpjPresumidoR   = irpjPresumidoAliq * P;
+      const irpjSimplesR = irpjSimplesAliq * P;
+      const irpjPresumidoR = irpjPresumidoAliq * P;
 
-      $('irpjValorReal').textContent   = fmtR(total.c);
-      $('irpjSimples').textContent     = `≈ ${fmtR(irpjSimplesR)} (${fmtPct(irpjSimplesR / total.c * 100)} do custo)`;
-      $('irpjPresumido').textContent   = `≈ ${fmtR(irpjPresumidoR)} (${fmtPct(irpjPresumidoR / total.c * 100)} do custo)`;
+      $('irpjValorReal').textContent = fmtR(total.c);
+      $('irpjSimples').textContent = `≈ ${fmtR(irpjSimplesR)} (${fmtPct(irpjSimplesR / total.c * 100)} do custo)`;
+      $('irpjPresumido').textContent = `≈ ${fmtR(irpjPresumidoR)} (${fmtPct(irpjPresumidoR / total.c * 100)} do custo)`;
 
       // ── Exibir resultado ──
       const res = $('resultado');
@@ -617,4 +634,5 @@
     }
   </script>
 </body>
+
 </html>
