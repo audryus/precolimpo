@@ -424,11 +424,58 @@
         </div>
       </div>
 
+      <!-- Memória de Cálculo (Prova Matemática) -->
+      <div class="glass-card p-6 sm:p-8 mt-4 slide-up slide-up-delay-3">
+        <h3 class="label-tag text-white/50 mb-4 flex items-center gap-2">
+          <span>🧾 Memória de Cálculo</span>
+          <span class="text-[10px] opacity-50 font-normal normal-case">(Entenda o processo matemático)</span>
+        </h3>
+        
+        <div class="space-y-6 text-sm sm:text-base">
+          <!-- Passo 1: Custo -->
+          <div class="flex flex-col gap-2">
+            <div class="text-white/40 text-xs font-semibold uppercase tracking-wider">1. Valor real do produto (sem imposto)</div>
+            <div class="font-mono bg-black/20 p-3 rounded-lg border border-white/5">
+              <span class="text-indigo-400">C</span> = <span class="text-white/80">P</span> × (1 − <span class="text-white/80">t</span>)
+            </div>
+            <div id="mathStep1" class="text-white/60 pl-2">
+              <span class="text-indigo-400">C</span> = <span id="vMathP">—</span> × (1 − <span id="vMathT">—</span>) = <strong id="vMathC" class="text-white/90">—</strong>
+            </div>
+          </div>
+
+          <!-- Passo 2: Valor do Imposto -->
+          <div class="flex flex-col gap-2">
+            <div class="text-white/40 text-xs font-semibold uppercase tracking-wider">2. Valor total do imposto</div>
+            <div class="font-mono bg-black/20 p-3 rounded-lg border border-white/5">
+              <span class="text-orange-400">I</span> = <span class="text-white/80">P</span> − <span class="text-white/80">C</span>
+            </div>
+            <div id="mathStep2" class="text-white/60 pl-2">
+              <span class="text-orange-400">I</span> = <span id="vMathP2">—</span> − <span id="vMathC2">—</span> = <strong id="vMathI" class="text-white/90">—</strong>
+            </div>
+          </div>
+
+          <!-- Passo 3: Taxa Real -->
+          <div class="flex flex-col gap-2">
+            <div class="text-white/40 text-xs font-semibold uppercase tracking-wider">3. Imposto real (sobre o custo)</div>
+            <div class="font-mono bg-black/20 p-3 rounded-lg border border-white/5">
+              <span class="text-red-400">Taxa Real</span> = <span class="text-white/80">I</span> / <span class="text-white/80">C</span>
+            </div>
+            <div id="mathStep3" class="text-white/60 pl-2">
+              <span class="text-red-400">Taxa Real</span> = <span id="vMathI2">—</span> / <span id="vMathC3">—</span> = <strong id="vMathFinal" class="text-red-400">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-white/5 text-xs text-white/30 leading-relaxed italic">
+          * Legenda: <strong class="text-white/50">P</strong> = Preço final pago; <strong class="text-white/50">t</strong> = Alíquota declarada (por dentro); <strong class="text-white/50">C</strong> = Custo real; <strong class="text-white/50">I</strong> = Valor do imposto em R$.
+        </div>
+      </div>
+
     </div>
 
     <!-- Footer -->
-    <div class="text-center mt-10 text-white/20 text-xs leading-relaxed">
-      <p>Preço Limpo · Cálculo baseado na fórmula <code class="bg-white/5 px-1 rounded">C = P(1−t)</code></p>
+    <div class="text-center mt-12 text-white/20 text-xs leading-relaxed">
+      <p>Preço Limpo · O imposto justo é o imposto transparente.</p>
       <p class="mt-1">Os valores são estimativas educativas. Não substitui consultoria tributária.</p>
     </div>
 
@@ -623,6 +670,20 @@
       $('irpjValorReal').textContent = fmtR(total.c);
       $('irpjSimples').textContent = `≈ ${fmtR(irpjSimplesR)} (${fmtPct(irpjSimplesR / total.c * 100)} do custo)`;
       $('irpjPresumido').textContent = `≈ ${fmtR(irpjPresumidoR)} (${fmtPct(irpjPresumidoR / total.c * 100)} do custo)`;
+
+      // ─── Memória de Cálculo ───
+      $('vMathP').textContent = fmtR(P);
+      $('vMathP2').textContent = fmtR(P);
+      $('vMathT').textContent = (total.taxaDeclarada).toFixed(4).replace('.', ',');
+      
+      $('vMathC').textContent = fmtR(total.c);
+      $('vMathC2').textContent = fmtR(total.c);
+      $('vMathC3').textContent = fmtR(total.c);
+
+      $('vMathI').textContent = fmtR(total.i);
+      $('vMathI2').textContent = fmtR(total.i);
+
+      $('vMathFinal').textContent = fmtPct(total.taxaReal * 100);
 
       // ── Exibir resultado ──
       const res = $('resultado');
